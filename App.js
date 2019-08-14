@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View, ScrollView, Image , Platform,StatusBar } from "react-native";
+import { StyleSheet, Text, View, ScrollView, Image , Platform,StatusBar,SafeAreaView } from "react-native";
 import Animated from 'react-native-reanimated';
 const images = [ 
   { id: 1, uri: require("./assets/1.jpg") },
