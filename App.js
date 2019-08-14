@@ -16,9 +16,27 @@ export default function App() {
   const headerY = Animated.interpolate(diffClampScrollY,{
     inputRange: [0,HEADER_HEIGHT],
     outputRange: [0,-HEADER_HEIGHT]
-  })
+  });
   return (
     <View style={{ flex: 1 }}>
+      <View
+          //To set the background color in IOS Status Bar also
+          style={{
+            backgroundColor: '#dddddd',
+            height: Platform.OS === 'ios' ? 0 : StatusBar.currentHeight,
+          }}>
+          <StatusBar
+            barStyle="dark-content"
+            // dark-content, light-content and default
+            hidden={false}
+            //To hide statusBar
+            translucent={false}
+            //allowing light, but not detailed shapes
+            networkActivityIndicatorVisible={true}
+            style={{
+            }}
+          />
+        </View>
       <Animated.View
         style={{
           position: "absolute",
